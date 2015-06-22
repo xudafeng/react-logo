@@ -94,19 +94,6 @@
 	'use strict';
 
 	module.exports = __webpack_require__(3);
-	/*
-	if (typeof window !== 'undefined') {
-	  window.ReactLogo = ReactLogo;
-	} else if (typeof exports !== 'undefined') {
-	  if (typeof module !== 'undefined' && module.exports) {
-	    exports = module.exports = ReactLogo;
-	  }
-	  exports.ReactLogo = ReactLogo;
-	} else if (typeof define === 'function') {
-	  define(function() {
-	    return ReactLogo;
-	  });
-	}*/
 
 
 /***/ },
@@ -171,6 +158,16 @@
 	    }
 	  }});
 
+	  Object.defineProperty(ReactLogo.prototype,"componentDidUpdate",{writable:true,configurable:true,value:function() {
+	    let state = this.state;
+	    let refs = this.refs;
+
+	    this.transforms = Object.keys(data).map(function(ref) {
+	      let pos = refs[ref].getDOMNode().getPointAtLength(state.length);
+	      return 'translate(' + pos.x + 'px, ' + pos.y + 'px)';
+	    });
+	  }});
+
 	  Object.defineProperty(ReactLogo.prototype,"tweenLoop",{writable:true,configurable:true,value:function() {
 	    let that = this;
 	    let tween = new TWEEN.Tween({
@@ -195,17 +192,8 @@
 	  }});
 
 	  Object.defineProperty(ReactLogo.prototype,"render",{writable:true,configurable:true,value:function() {
-	    let state = this.state;
 	    let props = this.props;
-	    let refs = this.refs;
-	    let transforms = [];
-
-	    if (refs.path1) {
-	      transforms = Object.keys(data).map(function(ref) {
-	        let pos = refs[ref].getDOMNode().getPointAtLength(state.length);
-	        return 'translate(' + pos.x + 'px, ' + pos.y + 'px)';
-	      });
-	    }
+	    let transforms = this.transforms || [];
 
 	    return (
 	      React.createElement("div", {className: props.prefixClassName + '-svg'}, 

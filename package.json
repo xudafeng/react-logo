@@ -1,6 +1,6 @@
 {
   "name": "react-logo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "react logo",
   "keywords": [
     "react",
@@ -25,14 +25,14 @@
   ],
   "devDependencies": {
     "react": "~0.13.1",
-    "startserver": "*",
     "tween.js": "~0.14.0",
     "mocha": "*",
     "istanbul-harmony": "~0.3.0",
     "should": "*",
     "jshint": "*",
     "webpack": "~1.9.0",
-    "jsx-loader": "^0.12.2"
+    "jsx-loader": "^0.12.2",
+    "startserver": "*"
   },
   "licenses": "MIT"
 }
