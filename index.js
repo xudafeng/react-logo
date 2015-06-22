@@ -13,17 +13,4 @@
 
 'use strict';
 
-var ReactLogo = require('./lib');
-
-if (typeof window !== 'undefined') {
-  window.ReactLogo = ReactLogo;
-} else if (typeof exports !== 'undefined') {
-  if (typeof module !== 'undefined' && module.exports) {
-    exports = module.exports = ReactLogo;
-  }
-  exports.ReactLogo = ReactLogo;
-} else if (typeof define === 'function') {
-  define(function() {
-    return ReactLogo;
-  });
-}
+module.exports = require('./lib');

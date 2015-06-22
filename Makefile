@@ -14,17 +14,15 @@ test: install
 		--require co-mocha
 travis: install
 	@NODE_ENV=test ${npm_bin}/istanbul cover \
-		./node_modules/.bin/_mocha \
+		${npm_bin}/_mocha \
 		--report lcovonly \
 		-- -t 20000 -r should-http test/*.test.js
 build:
-	@${npm_bin}/bower install
+	@${npm_bin}/webpack
 pull:
 	@git pull origin ${git_version}
 push:
 	@git push origin ${git_version}
-static: build
-	@node ${npm_bin}/webpack.js ./assets
 jshint:
 	@${npm_bin}/jshint .
 server: install

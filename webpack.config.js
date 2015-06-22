@@ -17,8 +17,7 @@ var path = require('path');
 
 var config = {
   entry: {
-    'react-logo': path.resolve('index'),
-    homepage: path.resolve('homepage')
+    index: path.resolve('homepage')
   },
   output: {
     path: path.join(__dirname, 'assets'),
@@ -26,8 +25,7 @@ var config = {
   },
   externals: {
     react: 'React',
-    'react/addons': 'React',
-    'ReactLogo': 'ReactLogo'
+    'react/addons': 'React'
   },
   module: {
     loaders: [

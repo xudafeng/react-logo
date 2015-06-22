@@ -14,7 +14,7 @@
 'use strict';
 
 let React = require('react/addons');
-let ReactLogo = require('ReactLogo');
+let ReactLogo = require('..');
 let Util = require('./util');
 
 Util.ready(function() {
