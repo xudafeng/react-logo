@@ -24,14 +24,17 @@ var config = {
     filename: '[name].js'
   },
   externals: {
-    react: 'React',
-    'react/addons': 'React'
+    react: 'React'
   },
   module: {
     loaders: [
       {
         test: /\.js$/,
         loader: 'jsx-loader?harmony'
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader'
       }
     ]
   }

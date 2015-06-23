@@ -14,6 +14,6 @@ ReactLogo.defaultProps = {
   bigCircleRadius: 16,
   smallCircleRadius: 6,
   animation: true,
-  duration: 3000
+  duration: 200
 };
 ```
