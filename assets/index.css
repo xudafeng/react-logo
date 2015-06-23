@@ -19,8 +19,9 @@ hr {
  */
 html {
   background-color: #301711;
-  overflow-x: hidden;
   height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 body {
   background: #301711;
@@ -33,6 +34,8 @@ body {
   line-height: 1;
   position: relative;
   height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 a {
   color: #facd3e;
