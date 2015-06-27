@@ -11,12 +11,8 @@
  *
  * ================================================================ */
 
-'use strict';
-
 let React = require('react');
+let LayoutComponent = require('./layout');
 let ReactLogo = require('..');
-let Util = require('./util');
 
-Util.ready(function() {
-  React.render(<ReactLogo/>, Util.find('#logo')[0]);
-});
+React.render(<LayoutComponent><ReactLogo /></LayoutComponent>, document.body);

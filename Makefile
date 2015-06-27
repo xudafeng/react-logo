@@ -26,5 +26,5 @@ push:
 jshint:
 	@${npm_bin}/jshint .
 server: install
-	@${npm_bin}/startserver &
+	@${npm_bin}/startserver
 .PHONY: test

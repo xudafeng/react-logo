@@ -91,7 +91,7 @@ a:hover, a:focus {
 a:active, a:hover {
   outline: 0;
 }
-#logo {
+.logo {
   width: 450px;
   height: 450px;
   position: absolute;

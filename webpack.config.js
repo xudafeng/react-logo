@@ -24,7 +24,6 @@ var config = {
     filename: '[name].js'
   },
   externals: {
-    react: 'React'
   },
   module: {
     loaders: [
