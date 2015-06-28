@@ -23,8 +23,8 @@ pull:
 	@git pull origin ${git_version}
 push:
 	@git push origin ${git_version}
-jshint:
-	@${npm_bin}/jshint .
+lint:
+	@${npm_bin}/eslint lib homepage
 server: install
 	@${npm_bin}/startserver
 .PHONY: test
