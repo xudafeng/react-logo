@@ -15,13 +15,13 @@
     "url": "git@github.com:xudafeng/react-logo.git"
   },
   "scripts": {
-    "jshint": "make jshint",
+    "lint": "make lint",
     "test": "make test"
   },
   "dependencies": {
   },
   "precommit": [
-    "jshint"
+    "lint"
   ],
   "devDependencies": {
     "react": "~0.13.1",
