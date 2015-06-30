@@ -19,6 +19,8 @@ travis: install
 		-- -t 20000 -r should-http test/*.test.js
 build:
 	@${npm_bin}/webpack
+watch:
+	@${npm_bin}/webpack --watch
 pull:
 	@git pull origin ${git_version}
 push:

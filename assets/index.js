@@ -61,7 +61,7 @@
 
 	var React = __webpack_require__(1);
 	var LayoutComponent = __webpack_require__(157);
-	var ReactLogo = __webpack_require__(158);
+	var ReactLogo = __webpack_require__(162);
 
 	React.render(React.createElement(
 	  LayoutComponent,
@@ -18225,62 +18225,73 @@
 	 *
 	 * ================================================================ */
 
-	"use strict";
+	'use strict';
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
 
 	var React = __webpack_require__(1);
+	var ForkmeonComponent = __webpack_require__(158);
+	var pkg = __webpack_require__(161);
+
+	var noop = function noop() {};
 
 	var LayoutComponent = (function (_React$Component) {
 	  function LayoutComponent() {
 	    _classCallCheck(this, LayoutComponent);
 
-	    _get(Object.getPrototypeOf(LayoutComponent.prototype), "constructor", this).apply(this, arguments);
+	    _get(Object.getPrototypeOf(LayoutComponent.prototype), 'constructor', this).apply(this, arguments);
 	  }
 
 	  _inherits(LayoutComponent, _React$Component);
 
 	  _createClass(LayoutComponent, [{
-	    key: "render",
+	    key: 'getForkmeonProps',
+	    value: function getForkmeonProps() {
+	      return {
+	        fixed: true,
+	        text: 'Fork me on Github',
+	        linkUrl: pkg.repository.url,
+	        onDemoUpdateDid: noop,
+	        flat: true
+	      };
+	    }
+	  }, {
+	    key: 'render',
 	    value: function render() {
 	      return React.createElement(
-	        "div",
+	        'div',
 	        null,
+	        React.createElement('div', { className: 'header' }),
 	        React.createElement(
-	          "a",
-	          { href: "https://github.com/xudafeng/react-logo" },
-	          React.createElement("img", { src: "assets/images/forkme.png", id: "fork" })
-	        ),
-	        React.createElement("div", { className: "header" }),
-	        React.createElement(
-	          "div",
-	          { className: "logo" },
+	          'div',
+	          { className: 'logo' },
 	          this.props.children
 	        ),
-	        React.createElement("div", { id: "editor" }),
+	        React.createElement('div', { id: 'editor' }),
 	        React.createElement(
-	          "div",
-	          { className: "footer" },
-	          "© ",
+	          'div',
+	          { className: 'footer' },
+	          '© ',
 	          React.createElement(
-	            "a",
-	            { href: "http://github.com/xudafeng" },
-	            "xdf"
+	            'a',
+	            { href: 'http://github.com/xudafeng' },
+	            'xdf'
 	          ),
-	          " ",
+	          ' ',
 	          new Date().getFullYear(),
 	          React.createElement(
-	            "span",
-	            { style: { display: "none" } },
-	            React.createElement("script", { src: "http://s4.cnzz.com/stat.php?id=1642323&web_id=1642323" })
+	            'span',
+	            { style: { display: 'none' } },
+	            React.createElement('script', { src: 'http://s4.cnzz.com/stat.php?id=1642323&web_id=1642323' })
 	          )
-	        )
+	        ),
+	        React.createElement(ForkmeonComponent, this.getForkmeonProps())
 	      );
 	    }
 	  }]);
@@ -18295,7 +18306,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	/* ================================================================
-	 * react-logo by xdf(xudafeng[at]126.com)
+	 * forkmeon by xdf(xudafeng[at]126.com)
 	 *
 	 * first created at : Mon Jun 02 2014 20:15:51 GMT+0800 (CST)
 	 *
@@ -18313,6 +18324,278 @@
 
 /***/ },
 /* 159 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* ================================================================
+	 * forkmeon by xdf(xudafeng[at]126.com)
+	 *
+	 * first created at : Mon Jun 02 2014 20:15:51 GMT+0800 (CST)
+	 *
+	 * ================================================================
+	 * Copyright 2014 xdf
+	 *
+	 * Licensed under the MIT License
+	 * You may not use this file except in compliance with the License.
+	 *
+	 * ================================================================ */
+
+	'use strict';
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+
+	var React = __webpack_require__(1);
+	var Util = __webpack_require__(160);
+
+	var innerStyle = {
+	  display: 'inline-block',
+	  width: '200px',
+	  overflow: 'hidden',
+	  padding: '6px 0',
+	  textAlign: 'center',
+	  transform: 'rotate(45deg)',
+	  textDecoration: 'none',
+	  color: '#fff',
+	  position: 'inherit',
+	  top: '45px',
+	  right: '-40px',
+	  borderWidth: '1px 0',
+	  borderStyle: 'dotted',
+	  borderColor: 'rgba(255, 255, 255, 0.7)',
+	  font: '700 13px "Helvetica Neue", Helvetica, Arial, sans-serif',
+	  boxShadow: '0 2px 3px 0 rgba(0, 0, 0, 0.5)',
+	  backgroundColor: '#a00',
+	  backgroundImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15))'
+	};
+
+	var outerStyle = {
+	  position: 'absolute',
+	  right: 0,
+	  top: 0,
+	  width: '150px',
+	  height: '150px',
+	  overflow: 'hidden',
+	  zIndex: 9999
+	};
+
+	var RibbonComponent = (function (_React$Component) {
+	  function RibbonComponent(props) {
+	    _classCallCheck(this, RibbonComponent);
+
+	    _get(Object.getPrototypeOf(RibbonComponent.prototype), 'constructor', this).call(this, props);
+	    this.state = {};
+	  }
+
+	  _inherits(RibbonComponent, _React$Component);
+
+	  _createClass(RibbonComponent, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {}
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps() {}
+	  }, {
+	    key: 'componentDidUpdate',
+	    value: function componentDidUpdate() {
+	      this.props.onDemoUpdateDid();
+	    }
+	  }, {
+	    key: 'getInnerStyle',
+	    value: function getInnerStyle() {
+	      var style = Util.merge({}, innerStyle);
+
+	      if (this.props.flat) {
+	        delete style.backgroundImage;
+	      }
+
+	      if (this.props.left) {
+	        style.left = style.right;
+	        style.transform = 'rotate(-45deg)';
+	        delete style.right;
+	      }
+
+	      if (!this.props.top) {
+	        style.bottom = style.top;
+	        delete style.top;
+
+	        if (this.props.left) {
+	          style.transform = 'rotate(45deg)';
+	        } else {
+	          style.transform = 'rotate(-45deg)';
+	        }
+	      }
+
+	      if (!this.props.border) {
+	        delete style.borderWidth;
+	        delete style.borderStyle;
+	        delete style.borderColor;
+	      }
+
+	      return style;
+	    }
+	  }, {
+	    key: 'getOuterStyle',
+	    value: function getOuterStyle() {
+	      var style = Util.merge({}, outerStyle);
+
+	      if (this.props.fixed) {
+	        style.position = 'fixed';
+	      }
+
+	      if (this.props.left) {
+	        style.left = 0;
+	        delete style.right;
+	      }
+
+	      if (!this.props.top) {
+	        style.bottom = 0;
+	        delete style.top;
+	      }
+	      return style;
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return React.createElement(
+	        'div',
+	        { className: this.props.classPrefix + '-ribbon', style: this.getOuterStyle() },
+	        React.createElement(
+	          'a',
+	          { target: '_blank', style: this.getInnerStyle(), href: this.props.linkUrl },
+	          this.props.text
+	        )
+	      );
+	    }
+	  }]);
+
+	  return RibbonComponent;
+	})(React.Component);
+
+	RibbonComponent.defaultProps = {
+	  classPrefix: 'github',
+	  fixed: false,
+	  flat: false,
+	  linkUrl: '',
+	  text: '',
+	  left: false,
+	  top: true,
+	  border: true
+	};
+
+	module.exports = RibbonComponent;
+
+/***/ },
+/* 160 */
+/***/ function(module, exports) {
+
+	/* ================================================================
+	 * forkmeon by xdf(xudafeng[at]126.com)
+	 *
+	 * first created at : Mon Jun 02 2014 20:15:51 GMT+0800 (CST)
+	 *
+	 * ================================================================
+	 * Copyright 2014 xdf
+	 *
+	 * Licensed under the MIT License
+	 * You may not use this file except in compliance with the License.
+	 *
+	 * ================================================================ */
+
+	"use strict";
+
+	var Util = {};
+
+	Util.merge = function (r, s) {
+	  this.each(s, function (v, k) {
+	    r[k] = v;
+	  });
+	  return r;
+	};
+
+	Util.each = function (obj, fn) {
+	  for (var i in obj) {
+	    if (obj.hasOwnProperty(i)) {
+	      fn.call(this, obj[i], i);
+	    }
+	  }
+	  return obj;
+	};
+
+	module.exports = Util;
+
+/***/ },
+/* 161 */
+/***/ function(module, exports) {
+
+	module.exports = {
+		"name": "react-logo",
+		"version": "1.0.6",
+		"description": "react logo",
+		"keywords": [
+			"react",
+			"ui component",
+			"ui",
+			"component"
+		],
+		"homepage": "http://xudafeng.github.io/react-logo",
+		"author": "xudafeng@126.com",
+		"repository": {
+			"type": "git",
+			"url": "https://github.com/xudafeng/react-logo.git"
+		},
+		"scripts": {
+			"lint": "make lint",
+			"test": "make test"
+		},
+		"dependencies": {},
+		"precommit": [
+			"lint"
+		],
+		"devDependencies": {
+			"react": "~0.13.3",
+			"mocha": "*",
+			"forkmeon.github.io": "~1.1.1",
+			"istanbul-harmony": "~0.3.0",
+			"should": "*",
+			"eslint-plugin-react": "~2.5.2",
+			"webpack": "~1.9.0",
+			"babel-core": "^5.x",
+			"babel-loader": "^5.x",
+			"json-loader": "^0.5.2",
+			"jsx-loader": "^0.12.2",
+			"startserver": "*"
+		},
+		"licenses": "MIT"
+	}
+
+/***/ },
+/* 162 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* ================================================================
+	 * react-logo by xdf(xudafeng[at]126.com)
+	 *
+	 * first created at : Mon Jun 02 2014 20:15:51 GMT+0800 (CST)
+	 *
+	 * ================================================================
+	 * Copyright 2014 xdf
+	 *
+	 * Licensed under the MIT License
+	 * You may not use this file except in compliance with the License.
+	 *
+	 * ================================================================ */
+
+	'use strict';
+
+	module.exports = __webpack_require__(163);
+
+/***/ },
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/* ================================================================

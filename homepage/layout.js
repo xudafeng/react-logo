@@ -12,14 +12,25 @@
  * ================================================================ */
 
 let React = require('react');
+let ForkmeonComponent = require('forkmeon.github.io');
+let pkg = require('../package');
+
+const noop = function() {};
 
 class LayoutComponent extends React.Component {
+  getForkmeonProps() {
+    return {
+      fixed: true,
+      text: 'Fork me on Github',
+      linkUrl: pkg.repository.url,
+      onDemoUpdateDid: noop,
+      flat: true
+    };
+  }
+
   render() {
     return (
       <div>
-        <a href="https://github.com/xudafeng/react-logo">
-          <img src="assets/images/forkme.png" id="fork"/>
-        </a>
         <div className="header"></div>
         <div className="logo">
         {this.props.children}
@@ -31,6 +42,7 @@ class LayoutComponent extends React.Component {
             <script src="http://s4.cnzz.com/stat.php?id=1642323&web_id=1642323"></script>
           </span>
         </div>
+        <ForkmeonComponent {...this.getForkmeonProps()}/>
       </div>
     );
   }
