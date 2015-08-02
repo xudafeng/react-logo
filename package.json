@@ -1,6 +1,6 @@
 {
   "name": "react-logo",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "react logo",
   "keywords": [
     "react",
@@ -20,8 +20,13 @@
   },
   "dependencies": {
   },
-  "precommit": [
+  "pre-commit": [
     "lint"
+  ],
+  "startserver": [
+    {
+      "startserver-webpack": "*"
+    }
   ],
   "devDependencies": {
     "react": "~0.13.3",
@@ -35,7 +40,9 @@
     "babel-loader": "^5.x",
     "json-loader": "^0.5.2",
     "jsx-loader": "^0.12.2",
-    "startserver": "*"
+    "startserver": "*",
+    "startserver-webpack": "*",
+    "pre-commit": "*"
   },
   "licenses": "MIT"
 }

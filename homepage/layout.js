@@ -38,9 +38,6 @@ class LayoutComponent extends React.Component {
         <div id="editor"></div>
         <div className="footer">
           &copy;&nbsp;<a href="http://github.com/xudafeng">xdf</a> {new Date().getFullYear()}
-          <span style={{display: 'none'}}>
-            <script src="http://s4.cnzz.com/stat.php?id=1642323&web_id=1642323"></script>
-          </span>
         </div>
         <ForkmeonComponent {...this.getForkmeonProps()}/>
       </div>
