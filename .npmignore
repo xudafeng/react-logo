@@ -9,9 +9,5 @@ coverage/
 *.html
 bower_components/
 assets/
-*.swp
-*.swo
-*.swn
-*.swl
-*.swm
-.sw*
+*.sw*
+*.un~

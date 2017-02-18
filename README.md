@@ -1,5 +1,4 @@
-react-logo
-==========
+# react-logo
 
 ## Options
 
