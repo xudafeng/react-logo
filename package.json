@@ -1,6 +1,6 @@
 {
   "name": "react-logo",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "react logo",
   "keywords": [
     "react",
@@ -9,39 +9,34 @@
     "component"
   ],
   "homepage": "http://xudafeng.github.io/react-logo",
-  "author": "xudafeng@126.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/xudafeng/react-logo.git"
   },
   "scripts": {
-    "lint": "make lint",
-    "test": "make test"
+    "lint": "eslint lib homepage",
+    "test": "mocha",
+    "build": "webpack -p",
+    "dev": "webpack-dev-server"
   },
-  "dependencies": {},
   "pre-commit": [
     "lint"
   ],
-  "startserver": [
-    {
-      "startserver-webpack": "*"
-    }
-  ],
   "devDependencies": {
     "babel-core": "^5.x",
-    "babel-loader": "^5.x",
+    "babel-loader": "^5.4.2",
     "eslint-plugin-react": "~2.5.2",
-    "forkmeon.github.io": "~1.1.1",
+    "forkmeon.github.io": "^1.1.10",
     "istanbul-harmony": "~0.3.0",
     "json-loader": "^0.5.2",
     "jsx-loader": "^0.12.2",
     "mocha": "*",
     "pre-commit": "*",
-    "react": "~0.13.3",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "should": "^11.2.0",
-    "startserver": "*",
-    "startserver-webpack": "*",
-    "webpack": "~1.9.0"
+    "webpack": "^3.9.1",
+    "webpack-dev-server": "^2.9.5"
   },
   "licenses": "MIT"
 }

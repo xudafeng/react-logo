@@ -2,7 +2,7 @@
 
 ## Options
 
-```js
+```javascript
 ReactLogo.defaultProps = {
   prefixClassName: 'react-logo',
   pathStrokeWidth: 4,
