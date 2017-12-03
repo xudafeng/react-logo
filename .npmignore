@@ -2,7 +2,6 @@
 test/
 coverage/
 *.html
-dist/
 *.sw*
 *.un~
 *.tgz

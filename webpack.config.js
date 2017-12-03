@@ -10,9 +10,6 @@ var config = {
     path: path.join(__dirname, 'dist'),
     filename: '[name].js'
   },
-  externals: {
-    react: 'window.React'
-  },
   module: {
     loaders: [
       {
