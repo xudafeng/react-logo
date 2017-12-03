@@ -17,7 +17,8 @@
     "lint": "eslint lib homepage",
     "test": "mocha",
     "build": "webpack -p",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "prepublish": "npm run build"
   },
   "pre-commit": [
     "lint"
