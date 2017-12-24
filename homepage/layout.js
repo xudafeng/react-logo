@@ -25,7 +25,6 @@ class LayoutComponent extends React.Component {
         <div className="logo">
           {this.props.children}
         </div>
-        <div id="editor"></div>
         <div className="footer">
           &copy;&nbsp;<a href="//github.com/xudafeng">xdf</a> {new Date().getFullYear()}
         </div>

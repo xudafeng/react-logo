@@ -8,18 +8,20 @@
     <base target="_blank"/>
   </head>
   <body>
-    <script>
-      var isOnline = !!~location.host.indexOf('github');
-      var script = document.createElement('script');
-      script.type = 'text/javascript';
-      script.src = (isOnline ? '//unpkg.com/react-logo@latest' : '.') + '/dist/index.js';
-      var link1 = document.createElement('link');
-      link1.rel = 'stylesheet';
-      link1.type = 'text/css';
-      link1.href = (isOnline ? '//unpkg.com/react-logo@latest' : '.') + '/assets/index.css';
-      var head = document.getElementsByTagName('head')[0];
-      head.appendChild(link1);
-      head.appendChild(script);
-    </script>
+    <div id="app">
+      <script>
+        var isOnline = !!~location.host.indexOf('github');
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = (isOnline ? '//unpkg.com/react-logo@latest' : '.') +  '/dist/homepage.js';
+        var link1 = document.createElement('link');
+        link1.rel = 'stylesheet';
+        link1.type = 'text/css';
+        link1.href = (isOnline ? '//unpkg.com/react-logo@latest' : '.') + '/assets/index.css';
+        var head = document.getElementsByTagName('head')[0];
+        head.appendChild(link1);
+        head.appendChild(script);
+      </script>
+    </div>
   </body>
 </html>
