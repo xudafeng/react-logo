@@ -1,3 +1,5 @@
+'use strict';
+
 let React = require('react');
 let ReactLogo = require('..');
 let ReactDOM = require('react-dom');

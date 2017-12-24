@@ -13,12 +13,16 @@ var config = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
-        loader: 'jsx-loader?harmony'
+        test: /\.jsx$/,
+        loader: 'jsx-loader'
       },
       {
-        test: /\.js$/,
-        loader: 'babel-loader'
+        test: /\.js?$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        query: {
+          presets: ['react', 'env', 'stage-2']
+        }
       },
       {
         test: /\.json$/,

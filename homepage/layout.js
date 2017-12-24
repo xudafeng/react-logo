@@ -1,3 +1,5 @@
+'use strict';
+
 let React = require('react');
 let ForkmeonComponent = require('forkmeon.github.io');
 
@@ -21,7 +23,7 @@ class LayoutComponent extends React.Component {
       <div>
         <div className="header"></div>
         <div className="logo">
-        {this.props.children}
+          {this.props.children}
         </div>
         <div id="editor"></div>
         <div className="footer">
