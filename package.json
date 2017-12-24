@@ -1,6 +1,6 @@
 {
   "name": "react-logo",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "react logo",
   "keywords": [
     "react",
@@ -20,6 +20,7 @@
     "dev": "webpack-dev-server",
     "prepublish": "npm run build"
   },
+  "main": "./dist/index.js",
   "pre-commit": [
     "lint"
   ],
